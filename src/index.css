@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+:root {
+  --primary-color: #39b54a;
+  --secondary-color: rgb(205, 205, 205);
+  
+}
+
+
+
+.hover-primary:hover {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.active-primary:active {
+  color: var(--primary-color);
+}
+
+.focus-primary:focus {
+  color: var(--primary-color);
+}

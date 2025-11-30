@@ -18,10 +18,8 @@ const About: React.FC = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    
     setTimeout(() => setAnimate(true), 200);
 
-   
     const duration = 2000;
     const frameRate = 30;
     const totalFrames = Math.round(duration / (1000 / frameRate));
@@ -71,7 +69,7 @@ const About: React.FC = () => {
           style={{ backgroundColor: "var(--secondary-color)" }}
         ></div>
 
-        <p className={`text-black text-base sm:text-2xl leading-relaxed mt-10 max-w-4xl mx-auto
+        <p className={`text-black text-justify text-base sm:text-2xl leading-relaxed mt-10 max-w-4xl mx-auto
           transition-all duration-1000 delay-300 ${animate ?"opacity-100 translate-y-0":"opacity-0 translate-y-5"}`}>
           Glint is a creative digital agency dedicated to crafting bold, meaningful,
           and visually captivating experiences. We are a team of passionate designers,
@@ -82,7 +80,6 @@ const About: React.FC = () => {
           technology, and strategy to deliver lasting impact.
         </p>
 
-
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 mt-10 flex-wrap">
           {counters.map((item, index) => (
             <div
@@ -91,9 +88,8 @@ const About: React.FC = () => {
                  transition-all duration-1000 delay-300
                 ${animate ?"opacity-100 transition-y-0": "opacity-0 transition-y-5"}`}
             >
-              <h2 className="text-white font-bold text-3xl sm:text-7xl mb-3 " 
-               >
-                {counts[index].toLocaleString()}
+              <h2 className="text-white font-bold text-3xl sm:text-7xl mb-3">
+                {counts[index].toLocaleString()}+
               </h2>
               <p className="text-black text-sm sm:text-base font-bold">
                 {item.label}
